@@ -17,7 +17,7 @@ The remediation handoff in the same chat at 16:57:09 UTC approves the additions 
 > - Verify effective canonical skill provenance and address skill shadowing.
 > - Distinguish native enforcement, workflow policies, and verification gates.
 
-The register below records the architectural interpretation of this wording. The second independent review checked both approval messages against the local chat record. A shared GitHub approval reference remains pending before closing [issue #22](https://github.com/manueldellapa/Skills/issues/22).
+The register below records the architectural interpretation of this wording. The second independent review checked both approval messages against the local chat record. The 25 November 2026 approval of ADR 0001 and D-01–D-30 is recorded in the [architecture approval comment on issue #22](https://github.com/manueldellapa/Skills/issues/22#issuecomment-7169934438).
 
 ## Context
 
