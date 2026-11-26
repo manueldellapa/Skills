@@ -16,6 +16,25 @@ Reusable software development workflows for OpenAI Codex and Claude Code.
 | [security-design](skills/security-design/SKILL.md) | Model threats, analyze trust boundaries, and design or review security controls. | Defaults to passive review and design. Scanning, penetration testing, and exploit development are outside its scope. |
 | [test-strategy](skills/test-strategy/SKILL.md) | Map risks and acceptance criteria to verification coverage and pass/fail evidence. | Defaults to read-only planning and review. Running checks and changing tests require separate consideration of scope and side effects. |
 
+## Canonical specialist roles
+
+The [runtime-neutral role contracts](roles/README.md) map the nine canonical
+skills to independently reusable, read-only specialists. Skills define how
+domain work is performed; role contracts define inputs, outputs, semantic
+artifact ownership, evidence, escalation, and handoffs.
+
+| Role | Canonical skill |
+| --- | --- |
+| [Product Analyst](roles/product-analyst.md) | `prd` |
+| [Software Architect](roles/software-architect.md) | `architecture` |
+| [Decision Analyst](roles/decision-analyst.md) | `adr` |
+| [Data Architect](roles/data-architect.md) | `data-model` |
+| [API Architect](roles/api-architect.md) | `api-contracts` |
+| [Security Architect](roles/security-architect.md) | `security-design` |
+| [QA Architect](roles/qa-architect.md) | `test-strategy` |
+| [DevOps Engineer](roles/devops-engineer.md) | `operations-runbook` |
+| [Documentation Auditor](roles/documentation-auditor.md) | `documentation-audit` |
+
 ## Repository layout
 
 Each skill has one canonical directory, `skills/<name>/`, containing `SKILL.md`
@@ -25,7 +44,11 @@ each client.
 ```text
 .agents/skills/<name> -> ../../skills/<name>  (Codex)
 .claude/skills/<name> -> ../../skills/<name>  (Claude Code)
+roles/<role-id>.md                              (runtime-neutral role contract)
 ```
+
+Role contracts are not client adapters and do not contain runtime-specific
+models, tools, permissions, or orchestration policy.
 
 ## Installation
 
